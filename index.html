@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poster Session</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f1117; --surface: #1a1d27; --surface2: #22263a;
+      --accent: #6ee7b7; --accent2: #818cf8; --warn: #fbbf24;
+      --text: #e8eaf0; --muted: #6b7280; --radius: 16px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; padding: 24px 16px 60px; }
+    header { text-align: center; padding: 32px 0 40px; }
+    .logo-chip { display: inline-flex; align-items: center; gap: 8px; background: var(--surface2); border: 1px solid #2e3350; border-radius: 100px; padding: 6px 16px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
+    .logo-chip span { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; display: inline-block; }
+    h1 { font-family: 'Syne', sans-serif; font-size: clamp(26px, 6vw, 40px); font-weight: 800; line-height: 1.1; letter-spacing: -.02em; }
+    h1 em { font-style: normal; background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .subtitle { margin-top: 10px; color: var(--muted); font-size: 15px; }
+
+    #state-screen { display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 60px 20px; text-align: center; }
+    .spinner { width: 40px; height: 40px; border: 3px solid var(--surface2); border-top-color: var(--accent); border-radius: 50%; animation: spin .8s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .error-icon { font-size: 48px; }
+    .error-title { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 700; }
+    .error-msg { color: var(--muted); font-size: 14px; line-height: 1.6; max-width: 320px; }
+
+    #main { display: none; max-width: 640px; margin: 0 auto; }
+    .already-banner { background: #1a2e1a; border: 1px solid #2d5a2d; border-radius: var(--radius); padding: 16px 20px; text-align: center; margin-bottom: 24px; color: var(--accent); font-size: 14px; display: none; }
+
+    .participant-card { background: linear-gradient(135deg, var(--surface2) 0%, #1e2235 100%); border: 1px solid #2e3350; border-radius: var(--radius); padding: 20px 24px; display: flex; align-items: center; gap: 16px; margin-bottom: 32px; }
+    .avatar { width: 48px; height: 48px; flex-shrink: 0; background: linear-gradient(135deg, var(--accent), var(--accent2)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 18px; color: var(--bg); }
+    .participant-name { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 700; }
+    .topic-badge { display: inline-block; margin-top: 4px; padding: 2px 10px; border-radius: 100px; font-size: 11px; font-weight: 500; letter-spacing: .05em; text-transform: uppercase; }
+    .topic-1 { background: #1a2e1a; color: #6ee7b7; } .topic-2 { background: #1e1a2e; color: #818cf8; }
+    .topic-3 { background: #2e1a1a; color: #f87171; } .topic-4 { background: #2e2a1a; color: #fbbf24; }
+    .topic-5 { background: #1a2a2e; color: #38bdf8; }
+    .topic-6 { background: #2a1a2e; color: #e879f9; }
+
+    .section-label { font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+    .progress-bar-wrap { background: var(--surface2); border-radius: 100px; height: 4px; margin-bottom: 28px; overflow: hidden; }
+    .progress-bar-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent2)); border-radius: 100px; transition: width .4s ease; }
+
+    .poster-card { background: var(--surface); border: 1px solid #2e3350; border-radius: var(--radius); margin-bottom: 20px; overflow: hidden; transition: border-color .2s; }
+    .poster-card.rated { border-color: var(--accent); }
+    .poster-header { padding: 18px 20px 14px; display: flex; align-items: flex-start; gap: 14px; }
+    .poster-num { flex-shrink: 0; width: 36px; height: 36px; background: var(--surface2); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; color: var(--muted); }
+    .poster-card.rated .poster-num { background: linear-gradient(135deg, var(--accent), var(--accent2)); color: var(--bg); }
+    .poster-title { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; line-height: 1.3; }
+    .poster-meta { margin-top: 5px; font-size: 12px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .out-badge { background: #2e2a1a; color: var(--warn); padding: 1px 8px; border-radius: 100px; font-size: 10px; font-weight: 600; letter-spacing: .04em; }
+
+    .rating-area { padding: 16px 20px 18px; border-top: 1px solid #2e3350; }
+    .rating-label { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
+    .stars { display: flex; gap: 8px; }
+    .star-btn { background: none; border: 2px solid #2e3350; border-radius: 10px; width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; cursor: pointer; transition: all .15s; color: var(--muted); font-family: 'Syne', sans-serif; }
+    .star-btn:hover { border-color: var(--accent); background: rgba(110,231,183,.1); color: var(--accent); transform: scale(1.08); }
+    .star-btn.active { border-color: var(--accent); background: var(--accent); color: var(--bg); transform: scale(1.05); }
+    .comment-input { margin-top: 12px; width: 100%; background: var(--surface2); border: 1px solid #2e3350; border-radius: 10px; padding: 10px 14px; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 13px; resize: none; transition: border-color .2s; min-height: 64px; }
+    .comment-input:focus { outline: none; border-color: var(--accent2); }
+    .comment-input::placeholder { color: var(--muted); }
+
+    .save-btn { margin-top: 12px; width: 100%; padding: 13px; border-radius: 10px; border: 2px solid var(--accent); background: transparent; color: var(--accent); font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; cursor: pointer; transition: all .2s; }
+    .save-btn:hover:not(:disabled) { background: var(--accent); color: var(--bg); }
+    .save-btn.saved { background: var(--accent); color: var(--bg); border-color: var(--accent); opacity: 1; cursor: default; }
+    .save-btn:disabled:not(.saved) { opacity: .35; cursor: not-allowed; border-color: var(--muted); color: var(--muted); }
+
+    #submit-section { margin-top: 12px; background: var(--surface); border: 1px solid #2e3350; border-radius: var(--radius); padding: 24px; text-align: center; }
+    .submit-title { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 800; margin-bottom: 8px; }
+    .submit-sub { color: var(--muted); font-size: 13px; margin-bottom: 20px; line-height: 1.5; }
+    .submit-main-btn { width: 100%; padding: 16px; border-radius: 12px; border: none; background: linear-gradient(135deg, var(--accent), var(--accent2)); color: var(--bg); font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 800; cursor: pointer; transition: opacity .2s; }
+    .submit-main-btn:hover:not(:disabled) { opacity: .9; }
+    .submit-main-btn:disabled { opacity: .35; cursor: not-allowed; }
+
+    #sending-overlay { display: none; position: fixed; inset: 0; background: rgba(15,17,23,.85); backdrop-filter: blur(4px); z-index: 100; align-items: center; justify-content: center; flex-direction: column; gap: 16px; }
+    #sending-overlay.active { display: flex; }
+    .sending-spinner { width: 56px; height: 56px; border: 4px solid var(--surface2); border-top-color: var(--accent); border-radius: 50%; animation: spin .7s linear infinite; }
+    .sending-text { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; }
+
+    #done-screen { display: none; text-align: center; padding: 60px 20px; }
+    .done-icon { font-size: 64px; margin-bottom: 20px; }
+    .done-title { font-family: 'Syne', sans-serif; font-size: 28px; font-weight: 800; margin-bottom: 10px; }
+    .done-sub { color: var(--muted); font-size: 15px; line-height: 1.6; }
+
+    .hint { font-size: 11px; color: var(--muted); margin-top: 6px; text-align: center; }
+  </style>
+</head>
+<body>
+
+<div id="sending-overlay">
+  <div class="sending-spinner"></div>
+  <div class="sending-text">Sending…</div>
+</div>
+
+<header>
+  <div class="logo-chip"><span></span> Poster Evaluation</div>
+  <h1>Your <em>posters</em><br>to evaluate</h1>
+  <p class="subtitle">Click a rating, save it, then submit!</p>
+</header>
+
+<div id="state-screen">
+  <div class="spinner"></div>
+  <p style="color:var(--muted);font-size:14px;">Loading…</p>
+</div>
+
+<div id="main">
+  <div class="already-banner" id="already-banner">
+    ✅ You have already submitted your evaluations. Thank you for your participation!
+  </div>
+  <div class="participant-card">
+    <div class="avatar" id="avatar">?</div>
+    <div class="participant-info">
+      <div class="participant-name" id="participant-name">—</div>
+      <span class="topic-badge" id="topic-badge">Topic —</span>
+    </div>
+  </div>
+  <p class="section-label">Progress — <span id="rated-count">0</span>/<span id="total-count">?</span> rated</p>
+  <div class="progress-bar-wrap"><div class="progress-bar-fill" id="progress-bar" style="width:0%"></div></div>
+  <p class="section-label">Your assigned posters</p>
+  <div id="posters-list"></div>
+  <div id="submit-section">
+    <div class="submit-title">All rated? 🎉</div>
+    <p class="submit-sub">All your posters are saved.<br>Click to send your evaluations.</p>
+    <button class="submit-main-btn" id="submit-btn" disabled onclick="submitAll()">Submit my evaluations</button>
+  </div>
+  <div id="done-screen">
+    <div class="done-icon">✅</div>
+    <div class="done-title">Thank you!</div>
+    <p class="done-sub">Your evaluations have been<br>successfully recorded. Enjoy the conference!</p>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════════
+// ⚙️  CONFIGURATION
+// ══════════════════════════════════════════════
+const API_URL  = "https://web-production-c2363.up.railway.app";
+const DATA_URL = "assignments.json";
+// ══════════════════════════════════════════════
+
+let ratings = {}, data = null, participant = null, assignedPosters = [];
+const topicColors = {
+  "Innovative materials":                      "topic-1",
+  "Low-carbon technologies":                   "topic-2",
+  "Health and therapy":                        "topic-3",
+  "Understanding the Earth and the Universe":  "topic-4",
+  "Technologies of the future":               "topic-5",
+  "Environment":                               "topic-6",
+};
+
+// Récupère l'ID participant depuis l'URL une seule fois
+const PARTICIPANT_ID = new URLSearchParams(window.location.search).get("id");
+
+async function init() {
+  if (!PARTICIPANT_ID) {
+    showError("Missing identifier", "Please scan your personal QR code.");
+    return;
+  }
+
+  // Charger assignments.json
+  try {
+    const res = await fetch(DATA_URL);
+    if (!res.ok) throw new Error();
+    data = await res.json();
+  } catch {
+    showError("File not found", "Unable to load assignments.json.");
+    return;
+  }
+
+  // Trouver le participant — les IDs sont des strings
+  participant = data.participants[String(PARTICIPANT_ID)];
+  if (!participant) {
+    showError("Unknown participant", `ID "${PARTICIPANT_ID}" introuvable.`);
+    return;
+  }
+
+  // Récupérer les posters assignés — forcer les IDs en string
+  assignedPosters = participant.assignedPosters
+    .map(id => data.posters[String(id)])
+    .filter(Boolean);
+
+  // Charger notes sauvegardées localement
+  const saved = localStorage.getItem("ratings_" + PARTICIPANT_ID);
+  if (saved) try { ratings = JSON.parse(saved); } catch {}
+
+  // Vérifier si déjà soumis côté serveur
+  try {
+    const st = await fetch(`${API_URL}/api/status/${PARTICIPANT_ID}`);
+    const status = await st.json();
+    if (status.submitted) {
+      renderParticipant();
+      renderPosters();
+      updateProgress();
+      document.getElementById("state-screen").style.display = "none";
+      document.getElementById("main").style.display = "block";
+      document.getElementById("already-banner").style.display = "block";
+      document.getElementById("submit-section").style.display = "none";
+      document.getElementById("done-screen").style.display = "block";
+      return;
+    }
+  } catch (e) {
+    console.warn("Impossible de vérifier le statut serveur :", e);
+  }
+
+  renderParticipant();
+  renderPosters();
+  updateProgress();
+  document.getElementById("state-screen").style.display = "none";
+  document.getElementById("main").style.display = "block";
+}
+
+function renderParticipant() {
+  const initials = participant.name.split(" ").map(w => w[0]).join("").slice(0, 2).toUpperCase();
+  document.getElementById("avatar").textContent = initials;
+  document.getElementById("participant-name").textContent = participant.name;
+  const badge = document.getElementById("topic-badge");
+  badge.textContent = "Topic " + participant.topic;
+  badge.className = "topic-badge " + (topicColors[participant.topic] || "topic-1");
+}
+
+function renderPosters() {
+  const list = document.getElementById("posters-list");
+  list.innerHTML = "";
+
+  // Afficher le nombre total de posters à noter
+  const totalEl = document.getElementById("total-count");
+  if (totalEl) totalEl.textContent = assignedPosters.length;
+
+  assignedPosters.forEach((poster, i) => {
+    const posterId = String(poster.id); // toujours string
+    const isOut = String(poster.topic) !== String(participant.topic);
+    const cur = ratings[posterId] || {};
+    const scored = cur.score > 0;
+
+    const card = document.createElement("div");
+    card.className = "poster-card" + (scored ? " rated" : "");
+    card.id = "card-" + posterId;
+    card.innerHTML = `
+      <div class="poster-header">
+        <div class="poster-num">${i + 1}</div>
+        <div>
+          <div class="poster-title">${poster.title}</div>
+          <div class="poster-meta">
+            <span>Poster #${posterId}</span><span>·</span><span>Topic ${poster.topic}</span>
+            ${isOut ? '<span class="out-badge">Outside your topic</span>' : ''}
+            ${poster.presenter ? `<span>· ${poster.presenter}</span>` : ''}
+          </div>
+        </div>
+      </div>
+      <div class="rating-area">
+        <div class="rating-label">Choose a rating from 1 to 5, then click Save</div>
+        <div class="stars" id="stars-${posterId}">
+          ${[1,2,3,4,5].map(n => `
+            <button class="star-btn ${cur.score >= n ? 'active' : ''}"
+              onclick="setRating('${posterId}', ${n})">${n}</button>
+          `).join("")}
+        </div>
+        <textarea class="comment-input" id="comment-${posterId}"
+          placeholder="Free comment (optional)…"
+          oninput="saveComment('${posterId}', this.value)">${cur.comment || ""}</textarea>
+        <button class="save-btn ${scored ? 'saved' : ''}" id="save-${posterId}"
+          onclick="saveRating('${posterId}')" ${scored ? '' : 'disabled'}>
+          ${scored ? '✓ Rating saved' : 'Save rating'}
+        </button>
+        ${!scored ? '<p class="hint">👆 Click a number above to enable this button</p>' : ''}
+      </div>`;
+    list.appendChild(card);
+  });
+}
+
+// Appelé quand on clique sur un chiffre (1-5)
+function setRating(posterId, score) {
+  posterId = String(posterId);
+  if (!ratings[posterId]) ratings[posterId] = {};
+  ratings[posterId].score = score;
+
+  // Mettre à jour visuellement les boutons
+  document.querySelectorAll(`#stars-${posterId} .star-btn`)
+    .forEach((btn, i) => btn.classList.toggle("active", i < score));
+
+  // Activer le bouton Enregistrer
+  const saveBtn = document.getElementById("save-" + posterId);
+  if (saveBtn) {
+    saveBtn.disabled = false;
+    saveBtn.textContent = "Save rating";
+    saveBtn.classList.remove("saved");
+  }
+
+  // Supprimer le hint
+  const card = document.getElementById("card-" + posterId);
+  const hint = card?.querySelector(".hint");
+  if (hint) hint.remove();
+}
+
+// Appelé quand on tape dans le commentaire
+function saveComment(posterId, val) {
+  posterId = String(posterId);
+  if (!ratings[posterId]) ratings[posterId] = {};
+  ratings[posterId].comment = val;
+}
+
+// Appelé quand on clique "Save rating"
+function saveRating(posterId) {
+  posterId = String(posterId);
+  if (!ratings[posterId] || !ratings[posterId].score) return;
+
+  // Sauvegarder dans localStorage
+  localStorage.setItem("ratings_" + PARTICIPANT_ID, JSON.stringify(ratings));
+
+  // Mettre à jour l'UI
+  document.getElementById("card-" + posterId)?.classList.add("rated");
+  const btn = document.getElementById("save-" + posterId);
+  if (btn) {
+    btn.textContent = "✓ Rating saved";
+    btn.disabled = true;
+    btn.classList.add("saved");
+  }
+
+  updateProgress();
+}
+
+function updateProgress() {
+  const n = assignedPosters.filter(p => {
+    const r = ratings[String(p.id)];
+    return r && r.score > 0;
+  }).length;
+
+  document.getElementById("rated-count").textContent = n;
+  document.getElementById("progress-bar").style.width = ((n / assignedPosters.length) * 100) + "%";
+
+  const submitBtn = document.getElementById("submit-btn");
+  if (submitBtn) submitBtn.disabled = n < assignedPosters.length;
+}
+
+async function submitAll() {
+  const btn = document.getElementById("submit-btn");
+  btn.disabled = true;
+  document.getElementById("sending-overlay").classList.add("active");
+
+  const payload = {
+    participantId: PARTICIPANT_ID,
+    participantName: participant.name,
+    participantTopic: participant.topic,
+    timestamp: new Date().toISOString(),
+    ratings: Object.entries(ratings).map(([posterId, r]) => ({
+      posterId: String(posterId),
+      posterTitle: data.posters[String(posterId)]?.title || "",
+      score: r.score,
+      comment: r.comment || ""
+    }))
+  };
+
+  try {
+    const res = await fetch(`${API_URL}/api/rate`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+    if (!res.ok) throw new Error("Erreur serveur " + res.status);
+
+    localStorage.setItem("submitted_" + PARTICIPANT_ID, "true");
+    document.getElementById("sending-overlay").classList.remove("active");
+    document.getElementById("submit-section").style.display = "none";
+    document.getElementById("done-screen").style.display = "block";
+
+  } catch (err) {
+    console.error(err);
+    document.getElementById("sending-overlay").classList.remove("active");
+    btn.disabled = false;
+    btn.textContent = "⚠ Réessayer — Submit my evaluations";
+    alert("❌ Sending failed. Please check your connection and try again.");
+  }
+}
+
+function showError(title, msg) {
+  document.getElementById("state-screen").innerHTML = `
+    <div class="error-icon">⚠️</div>
+    <div class="error-title">${title}</div>
+    <p class="error-msg">${msg}</p>`;
+}
+
+init();
+</script>
+</body>
+</html>

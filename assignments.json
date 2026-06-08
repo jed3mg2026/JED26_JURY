@@ -1,0 +1,610 @@
+{
+  "config": {
+    "title": "Session Posters",
+    "postersPerParticipant": "0 (présentateurs) / 6 (autres)",
+    "totalPosters": 32,
+    "totalParticipants": 42
+  },
+  "posters": {
+    "1": {
+      "id": "1",
+      "title": "Local approach for plasma atomic layer etching of titanium nitride",
+      "topic": "Innovative materials",
+      "presenter": "Le Pape Thomas"
+    },
+    "2": {
+      "id": "2",
+      "title": "INNOVATIVE MATRIX FOR RADIOACTIVE WASTE CONDITIONING; GEOPOLYMERS AND DIATOMACEOUS EARTH",
+      "topic": "Innovative materials",
+      "presenter": "ILERI Ozgur"
+    },
+    "3": {
+      "id": "3",
+      "title": "Lakes and rivers on Titan, a moon of Saturn",
+      "topic": "Understanding the Earth and the Universe",
+      "presenter": "Parmentier Arlen"
+    },
+    "4": {
+      "id": "4",
+      "title": "Synthesis of original 3’-modified triazolo-nucleosides to fight against viruses ",
+      "topic": "Health and Therapy",
+      "presenter": "Mouraud Maëlle"
+    },
+    "5": {
+      "id": "5",
+      "title": "Nonequilibrium dynamics of an activated supercooled water nanodrop",
+      "topic": "Innovative materials",
+      "presenter": "TRUONG Quoc Tuan"
+    },
+    "6": {
+      "id": "6",
+      "title": "Remote Heavy Atom Effect in 2-Aryl-3-hydroxypyrroloquinolone Derivatives: Impact on Photophysical Properties",
+      "topic": "Environment",
+      "presenter": "JBILOU Chaimae"
+    },
+    "7": {
+      "id": "7",
+      "title": "A theoretical study of Hemiindigoids toward their potent MOST applications",
+      "topic": "Innovative materials",
+      "presenter": "Attupuram Joychan Johnrich"
+    },
+    "8": {
+      "id": "8",
+      "title": "Production of protactinium-230 for a U-230/Th-226 generator for targeted alpha therapy: optimization of irradiation conditions and target fabrication",
+      "topic": "Health and Therapy",
+      "presenter": "El Khoury Perla"
+    },
+    "9": {
+      "id": "9",
+      "title": "Integration of 1D and fast 2D (UF-COSY, NUS-HSQC, NUS-TOCSY) NMR metabolomic and lipidomic datasets applied to mice liver samples",
+      "topic": "Health and Therapy",
+      "presenter": "Delage Marie"
+    },
+    "10": {
+      "id": "10",
+      "title": "A Redox-Active Molecular Cage as a Platform for Supramolecular Masking and Rotaxane Design",
+      "topic": "Innovative materials",
+      "presenter": "ALSHAB Malika"
+    },
+    "11": {
+      "id": "11",
+      "title": "Influence of additives on polymer degradation mechanisms and the release of by-products into the environment",
+      "topic": "Environment",
+      "presenter": "Passin Amandine"
+    },
+    "12": {
+      "id": "12",
+      "title": "Origins of Kasei Valles on Mars: Streamlined islands and fluid dynamics",
+      "topic": "Understanding the Earth and the Universe",
+      "presenter": "Mahoume Nicolas"
+    },
+    "13": {
+      "id": "13",
+      "title": "Control of the microstructure and properties of parts made from preci-pitation-hardened martensitic stainless steel produced by WAAM through optimization of thermal management",
+      "topic": "Technologies of the future",
+      "presenter": "Maataoui Jailam"
+    },
+    "14": {
+      "id": "14",
+      "title": "Nouvelle extension de chaînes carbonées via réaction d'alkylation sur la diazoacétone-TIPS en vue d'accéder à une plateforme fonctionnelle pour l'obtention d'immunoconjugués ou de PROTAC",
+      "topic": "Health and Therapy",
+      "presenter": "Girard Jules"
+    },
+    "15": {
+      "id": "15",
+      "title": "Probing the Diffusion of Molecular Dyes by Taylor Dispersion Analysis with a Conventional Spectroscopic Flow Cell Detector",
+      "topic": "Health and Therapy",
+      "presenter": "YARED Charbel"
+    },
+    "16": {
+      "id": "16",
+      "title": "A laser-plasma acceleration approach for innovative medical radioisotope production.",
+      "topic": "Health and Therapy",
+      "presenter": "Tissot Aymeric"
+    },
+    "17": {
+      "id": "17",
+      "title": "Low Dark Current Organic Photodetectors Enabled by Cyanostilbene-based pi-Conjugated Systems",
+      "topic": "Innovative materials",
+      "presenter": "Roux Benjamin"
+    },
+    "18": {
+      "id": "18",
+      "title": "Reducing Microplastic Pollution with Biodegradable Microcapsules",
+      "topic": "Environment",
+      "presenter": "Masson Melanie"
+    },
+    "19": {
+      "id": "19",
+      "title": "Accelerating Divergent Diastereoselective Synthesis Using Warm-Start Bayesian Optimization in an Autonomous Flow Platform",
+      "topic": "Technologies of the future",
+      "presenter": "LLOBET Maxime"
+    },
+    "20": {
+      "id": "20",
+      "title": "Liquid Metal Embrittlement in Galvanized Steels for Automotive Applications",
+      "topic": "Innovative materials",
+      "presenter": "ADEOYE dahuda"
+    },
+    "21": {
+      "id": "21",
+      "title": "Extreme event-driven remobilization of trace metals in wetlands: concentration, speciation, isotopic measurements",
+      "topic": "Environment",
+      "presenter": "Goislot Solène"
+    },
+    "22": {
+      "id": "22",
+      "title": "Light-Frozen Dynamic Covalent Synthesis of Extended Diimide-incorporating Macrocycles",
+      "topic": "Innovative materials",
+      "presenter": "Picourlat Eléna"
+    },
+    "23": {
+      "id": "23",
+      "title": "Ruthenium speciation through its production process",
+      "topic": "Health and Therapy",
+      "presenter": "Chevalet Romain"
+    },
+    "24": {
+      "id": "24",
+      "title": "Advanced conducting polymers for enhanced electrochemical energy storage",
+      "topic": "Innovative materials",
+      "presenter": "COUPPOUSSAMY Sarah"
+    },
+    "25": {
+      "id": "25",
+      "title": "Measurement of beta decay properties of nuclei of interest for nuclear structure and astrophysics, and applications",
+      "topic": "Understanding the Earth and the Universe",
+      "presenter": "Durand Samuel"
+    },
+    "26": {
+      "id": "26",
+      "title": "Comprehensive analysis of trace polymers and quantification using gas chromatography coupled with mass spectrometry",
+      "topic": "Environment",
+      "presenter": "Paillard Ronan"
+    },
+    "27": {
+      "id": "27",
+      "title": "New N-type Conjugated Polymers for Organic Electronics by Post-Locking Dynamic Covalent Bonds and Metal-Free Synthesis of N-incorporating Polyimide Nanographene",
+      "topic": "Innovative materials",
+      "presenter": "LORIOT Lucas J.R."
+    },
+    "28": {
+      "id": "28",
+      "title": "Geochemical modeling of major and trace elements release from stormwater infiltration basin sediments",
+      "topic": "Environment",
+      "presenter": "DOYON clélia"
+    },
+    "29": {
+      "id": "29",
+      "title": "Ruthenium speciation through its production process",
+      "topic": "Innovative materials",
+      "presenter": "Adrien Delanoë"
+    },
+    "30": {
+      "id": "30",
+      "title": "Liquid Xenon Detectors for Preclinical Imaging & Supernova Neutrinos: Pile-Up Classification Strategies for High-Flux data",
+      "topic": "Understanding the Earth and the Universe",
+      "presenter": "Kaushik Gupta"
+    },
+    "31": {
+      "id": "31",
+      "title": "Desing and Synthesis of Constrained Hemiindigos for Molecular Solar Thermal Systems (MOST)",
+      "topic": "Low-carbon technologies",
+      "presenter": "Bord Charly"
+    },
+    "32": {
+      "id": "32",
+      "title": "Longitudinal and Vertical Distribution of Tire & Road Wear Particles and Microplastics in Contrasting Urban Bioswales",
+      "topic": "Environment",
+      "presenter": "Sampriti Roy"
+    }
+  },
+  "participants": {
+    "1": {
+      "id": "1",
+      "name": "Le Pape Thomas",
+      "topic": "Innovative materials",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "2": {
+      "id": "2",
+      "name": "ILERI Ozgur",
+      "topic": "Innovative materials",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "3": {
+      "id": "3",
+      "name": "Parmentier Arlen",
+      "topic": "Understanding the Earth and the Universe",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "4": {
+      "id": "4",
+      "name": "Mouraud Maëlle",
+      "topic": "Health and Therapy",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "5": {
+      "id": "5",
+      "name": "TRUONG Quoc Tuan",
+      "topic": "Innovative materials",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "6": {
+      "id": "6",
+      "name": "JBILOU Chaimae",
+      "topic": "Environment",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "7": {
+      "id": "7",
+      "name": "Attupuram Joychan Johnrich",
+      "topic": "Innovative materials",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "8": {
+      "id": "8",
+      "name": "El Khoury Perla",
+      "topic": "Health and Therapy",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "9": {
+      "id": "9",
+      "name": "Delage Marie",
+      "topic": "Health and Therapy",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "10": {
+      "id": "10",
+      "name": "ALSHAB Malika",
+      "topic": "Innovative materials",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "11": {
+      "id": "11",
+      "name": "Passin Amandine",
+      "topic": "Environment",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "12": {
+      "id": "12",
+      "name": "Mahoume Nicolas",
+      "topic": "Understanding the Earth and the Universe",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "13": {
+      "id": "13",
+      "name": "Maataoui Jailam",
+      "topic": "Technologies of the future",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "14": {
+      "id": "14",
+      "name": "Girard Jules",
+      "topic": "Health and Therapy",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "15": {
+      "id": "15",
+      "name": "YARED Charbel",
+      "topic": "Health and Therapy",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "16": {
+      "id": "16",
+      "name": "Tissot Aymeric",
+      "topic": "Health and Therapy",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "17": {
+      "id": "17",
+      "name": "Roux Benjamin",
+      "topic": "Innovative materials",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "18": {
+      "id": "18",
+      "name": "Masson Melanie",
+      "topic": "Environment",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "19": {
+      "id": "19",
+      "name": "LLOBET Maxime",
+      "topic": "Technologies of the future",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "20": {
+      "id": "20",
+      "name": "ADEOYE dahuda",
+      "topic": "Innovative materials",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "21": {
+      "id": "21",
+      "name": "Goislot Solène",
+      "topic": "Environment",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "22": {
+      "id": "22",
+      "name": "Picourlat Eléna",
+      "topic": "Innovative materials",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "23": {
+      "id": "23",
+      "name": "Chevalet Romain",
+      "topic": "Health and Therapy",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "24": {
+      "id": "24",
+      "name": "COUPPOUSSAMY Sarah",
+      "topic": "Innovative materials",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "25": {
+      "id": "25",
+      "name": "Durand Samuel",
+      "topic": "Understanding the Earth and the Universe",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "26": {
+      "id": "26",
+      "name": "Paillard Ronan",
+      "topic": "Environment",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "27": {
+      "id": "27",
+      "name": "LORIOT Lucas J.R.",
+      "topic": "Innovative materials",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "28": {
+      "id": "28",
+      "name": "DOYON clélia",
+      "topic": "Environment",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "29": {
+      "id": "29",
+      "name": "Adrien Delanoë",
+      "topic": "Innovative materials",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "30": {
+      "id": "30",
+      "name": "Kaushik Gupta",
+      "topic": "Understanding the Earth and the Universe",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "31": {
+      "id": "31",
+      "name": "Bord Charly",
+      "topic": "Low-carbon technologies",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "32": {
+      "id": "32",
+      "name": "Sampriti Roy",
+      "topic": "Environment",
+      "hasPoster": true,
+      "totalToRate": 0,
+      "assignedPosters": []
+    },
+    "33": {
+      "id": "33",
+      "name": "Jean-Yves Le Questel",
+      "topic": "Understanding the Earth and the Universe",
+      "hasPoster": false,
+      "totalToRate": 6,
+      "assignedPosters": [
+        "13",
+        "9",
+        "15",
+        "14",
+        "16",
+        "8"
+      ]
+    },
+    "34": {
+      "id": "34",
+      "name": "Jana Harb",
+      "topic": "Understanding the Earth and the Universe",
+      "hasPoster": false,
+      "totalToRate": 6,
+      "assignedPosters": [
+        "2",
+        "6",
+        "5",
+        "7",
+        "1",
+        "4"
+      ]
+    },
+    "35": {
+      "id": "35",
+      "name": "Mireia Rodriguez",
+      "topic": "Innovative Materials",
+      "hasPoster": false,
+      "totalToRate": 6,
+      "assignedPosters": [
+        "29",
+        "30",
+        "27",
+        "25",
+        "28",
+        "26"
+      ]
+    },
+    "36": {
+      "id": "36",
+      "name": "Jakub Licko",
+      "topic": "Innovative Materials",
+      "hasPoster": false,
+      "totalToRate": 6,
+      "assignedPosters": [
+        "18",
+        "22",
+        "20",
+        "17",
+        "19",
+        "21"
+      ]
+    },
+    "37": {
+      "id": "37",
+      "name": "Laurent Fontaine",
+      "topic": "Low-carbon technologies",
+      "hasPoster": false,
+      "totalToRate": 6,
+      "assignedPosters": [
+        "28",
+        "23",
+        "27",
+        "24",
+        "26",
+        "25"
+      ]
+    },
+    "38": {
+      "id": "38",
+      "name": "Oceane Baffroy",
+      "topic": "Low-carbon technologies",
+      "hasPoster": false,
+      "totalToRate": 6,
+      "assignedPosters": [
+        "3",
+        "32",
+        "5",
+        "2",
+        "1",
+        "4"
+      ]
+    },
+    "39": {
+      "id": "39",
+      "name": "Gines Martinez",
+      "topic": "Technologies of the future",
+      "hasPoster": false,
+      "totalToRate": 6,
+      "assignedPosters": [
+        "24",
+        "23",
+        "15",
+        "22",
+        "16",
+        "14"
+      ]
+    },
+    "40": {
+      "id": "40",
+      "name": "Christopher Hassan",
+      "topic": "Technologies of the future",
+      "hasPoster": false,
+      "totalToRate": 6,
+      "assignedPosters": [
+        "12",
+        "10",
+        "11",
+        "3",
+        "9",
+        "8"
+      ]
+    },
+    "41": {
+      "id": "41",
+      "name": "Jury 1",
+      "topic": "Health and Therapy",
+      "hasPoster": false,
+      "totalToRate": 6,
+      "assignedPosters": [
+        "20",
+        "17",
+        "18",
+        "19",
+        "13",
+        "21"
+      ]
+    },
+    "42": {
+      "id": "42",
+      "name": "Jury2",
+      "topic": "Health and Therapy",
+      "hasPoster": false,
+      "totalToRate": 6,
+      "assignedPosters": [
+        "11",
+        "12",
+        "6",
+        "31",
+        "7",
+        "10"
+      ]
+    }
+  }
+}
