@@ -97,7 +97,7 @@
 <header>
   <div class="logo-chip"><span></span> Poster Evaluation</div>
   <h1>Your <em>posters</em><br>to evaluate</h1>
-  <p class="subtitle">Click a rating, save it, then submit!</p>
+  <p class="subtitle">Rate the poster, save it, then submit!</p>
 </header>
 
 <div id="state-screen">
@@ -121,7 +121,7 @@
   <p class="section-label">Your assigned posters</p>
   <div id="posters-list"></div>
   <div id="submit-section">
-    <div class="submit-title">All rated? 🎉</div>
+    <div class="submit-title">All rated? </div>
     <p class="submit-sub">All your posters are saved.<br>Click to send your evaluations.</p>
     <button class="submit-main-btn" id="submit-btn" disabled onclick="submitAll()">Submit my evaluations</button>
   </div>
@@ -136,7 +136,7 @@
 // ══════════════════════════════════════════════
 // ⚙️  CONFIGURATION
 // ══════════════════════════════════════════════
-const API_URL  = "jed26juryserveur-production.up.railway.app"
+const API_URL  = "https://web-production-e1566.up.railway.app/";
 const DATA_URL = "assignments.json";
 // ══════════════════════════════════════════════
 
@@ -250,7 +250,7 @@ function renderPosters() {
         </div>
       </div>
       <div class="rating-area">
-        <div class="rating-label">Choose a rating from 1 to 5, then click Save</div>
+        <div class="rating-label">Please rate from 1 to 5 you runderstanding of this poster subject</div>
         <div class="stars" id="stars-${posterId}">
           ${[1,2,3,4,5].map(n => `
             <button class="star-btn ${cur.score >= n ? 'active' : ''}"
@@ -264,7 +264,7 @@ function renderPosters() {
           onclick="saveRating('${posterId}')" ${scored ? '' : 'disabled'}>
           ${scored ? '✓ Rating saved' : 'Save rating'}
         </button>
-        ${!scored ? '<p class="hint">👆 Click a number above to enable this button</p>' : ''}
+        ${!scored ? '<p class="hint"> Rate the poster to save</p>' : ''}
       </div>`;
     list.appendChild(card);
   });
@@ -370,7 +370,7 @@ async function submitAll() {
     document.getElementById("sending-overlay").classList.remove("active");
     btn.disabled = false;
     btn.textContent = "⚠ Réessayer — Submit my evaluations";
-    alert("❌ Sending failed. Please check your connection and try again.");
+    alert(" Sending failed. Please check your connection and try again.");
   }
 }
 
