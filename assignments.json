@@ -1,9 +1,9 @@
 {
   "config": {
     "title": "Session Posters",
-    "postersPerParticipant": "0 (présentateurs) / 6 (autres)",
+    "postersPerParticipant": "0 (présentateurs) / 10 (autres)",
     "totalPosters": 32,
-    "totalParticipants": 42
+    "totalParticipants": 44
   },
   "posters": {
     "1": {
@@ -461,14 +461,18 @@
       "name": "Jean-Yves Le Questel",
       "topic": "Understanding the Earth and the Universe",
       "hasPoster": false,
-      "totalToRate": 6,
+      "totalToRate": 10,
       "assignedPosters": [
-        "13",
-        "9",
-        "15",
-        "14",
-        "16",
-        "8"
+        "4",
+        "30",
+        "2",
+        "7",
+        "1",
+        "6",
+        "3",
+        "5",
+        "12",
+        "25"
       ]
     },
     "34": {
@@ -476,14 +480,18 @@
       "name": "Jana Harb",
       "topic": "Understanding the Earth and the Universe",
       "hasPoster": false,
-      "totalToRate": 6,
+      "totalToRate": 10,
       "assignedPosters": [
+        "3",
         "2",
-        "6",
-        "5",
-        "7",
+        "31",
+        "32",
         "1",
-        "4"
+        "30",
+        "27",
+        "25",
+        "29",
+        "12"
       ]
     },
     "35": {
@@ -491,14 +499,18 @@
       "name": "Mireia Rodriguez",
       "topic": "Innovative Materials",
       "hasPoster": false,
-      "totalToRate": 6,
+      "totalToRate": 10,
       "assignedPosters": [
-        "29",
-        "30",
         "27",
+        "23",
+        "20",
+        "21",
+        "24",
         "25",
-        "28",
-        "26"
+        "18",
+        "14",
+        "17",
+        "22"
       ]
     },
     "36": {
@@ -506,14 +518,18 @@
       "name": "Jakub Licko",
       "topic": "Innovative Materials",
       "hasPoster": false,
-      "totalToRate": 6,
+      "totalToRate": 10,
       "assignedPosters": [
-        "18",
-        "22",
-        "20",
-        "17",
-        "19",
-        "21"
+        "8",
+        "9",
+        "11",
+        "7",
+        "15",
+        "3",
+        "16",
+        "12",
+        "6",
+        "10"
       ]
     },
     "37": {
@@ -521,14 +537,18 @@
       "name": "Laurent Fontaine",
       "topic": "Low-carbon technologies",
       "hasPoster": false,
-      "totalToRate": 6,
+      "totalToRate": 10,
       "assignedPosters": [
-        "28",
-        "23",
-        "27",
-        "24",
-        "26",
-        "25"
+        "31",
+        "18",
+        "17",
+        "15",
+        "20",
+        "22",
+        "21",
+        "14",
+        "25",
+        "11"
       ]
     },
     "38": {
@@ -536,14 +556,18 @@
       "name": "Oceane Baffroy",
       "topic": "Low-carbon technologies",
       "hasPoster": false,
-      "totalToRate": 6,
+      "totalToRate": 10,
       "assignedPosters": [
-        "3",
+        "1",
+        "4",
+        "6",
+        "26",
+        "28",
+        "29",
         "32",
         "5",
-        "2",
-        "1",
-        "4"
+        "30",
+        "31"
       ]
     },
     "39": {
@@ -551,14 +575,18 @@
       "name": "Gines Martinez",
       "topic": "Technologies of the future",
       "hasPoster": false,
-      "totalToRate": 6,
+      "totalToRate": 10,
       "assignedPosters": [
-        "24",
-        "23",
-        "15",
-        "22",
+        "7",
         "16",
-        "14"
+        "8",
+        "3",
+        "13",
+        "10",
+        "9",
+        "12",
+        "19",
+        "2"
       ]
     },
     "40": {
@@ -566,14 +594,18 @@
       "name": "Christopher Hassan",
       "topic": "Technologies of the future",
       "hasPoster": false,
-      "totalToRate": 6,
+      "totalToRate": 10,
       "assignedPosters": [
-        "12",
-        "10",
-        "11",
-        "3",
-        "9",
-        "8"
+        "21",
+        "14",
+        "24",
+        "20",
+        "13",
+        "22",
+        "19",
+        "27",
+        "16",
+        "18"
       ]
     },
     "41": {
@@ -581,14 +613,18 @@
       "name": "Jury 1",
       "topic": "Health and Therapy",
       "hasPoster": false,
-      "totalToRate": 6,
+      "totalToRate": 10,
       "assignedPosters": [
-        "20",
         "17",
-        "18",
-        "19",
-        "13",
-        "21"
+        "5",
+        "7",
+        "11",
+        "6",
+        "10",
+        "9",
+        "4",
+        "8",
+        "15"
       ]
     },
     "42": {
@@ -596,14 +632,56 @@
       "name": "Jury2",
       "topic": "Health and Therapy",
       "hasPoster": false,
-      "totalToRate": 6,
+      "totalToRate": 10,
       "assignedPosters": [
+        "19",
+        "9",
+        "13",
+        "18",
+        "16",
+        "10",
+        "17",
         "11",
-        "12",
-        "6",
+        "8",
+        "15"
+      ]
+    },
+    "43": {
+      "id": "43",
+      "name": "Pierre Tessier",
+      "topic": "Technologies of the future",
+      "hasPoster": false,
+      "totalToRate": 10,
+      "assignedPosters": [
+        "20",
+        "19",
+        "26",
+        "24",
+        "23",
+        "21",
+        "14",
+        "13",
+        "28",
+        "22"
+      ]
+    },
+    "44": {
+      "id": "44",
+      "name": "Piriou",
+      "topic": "Cassandra",
+      "hasPoster": false,
+      "totalToRate": 10,
+      "assignedPosters": [
+        "5",
+        "29",
         "31",
-        "7",
-        "10"
+        "2",
+        "26",
+        "1",
+        "23",
+        "28",
+        "4",
+        "32"
       ]
     }
   }
